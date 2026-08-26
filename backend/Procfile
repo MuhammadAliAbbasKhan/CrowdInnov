@@ -1,0 +1,1 @@
+web: gunicorn crowdinnov_backend.wsgi:application

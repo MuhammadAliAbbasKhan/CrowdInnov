@@ -1,0 +1,60 @@
+================================================================================
+MASTER AI PROMPT: FULL-STACK WEBSITE CLONE & APPLICATION BUILDER BLUEPRINT
+================================================================================
+
+[SYSTEM ROLE INSTRUCTION]
+You are an expert Senior Full-Stack Software Engineer and UI/UX Designer.
+Your task is to build a complete, 100% production-ready web application project named crowdinnov.org that replicates the exact design, layout, header, footer, admin security, dual database sync, and crowdsourcing platform architecture from HeroX.com.
+
+Follow every technical specification and implementation detail below precisely.
+
+================================================================================
+1. HEADER & FOOTER REPLICA SPECIFICATIONS (HEROX / CROWDINNOV LAYOUT)
+================================================================================
+A. HEADER DESIGN & NAVIGATION:
+   - Top Bar Accent: Vibrant lime-green accent border stripe (#84CC16 / #94E000) at top edge.
+   - Brand Logo: CrowdInnov logo featuring geometric innovation spark badge and crisp dark navy typography.
+   - Main Links: "Explore Challenges", "For Business", "For Startups", "Who We Are", "Results".
+   - Control Buttons: Search icon button, "Get Started" (outlined light gray button), "Log In" (dark navy pill button).
+   - CRITICAL MANDATORY RULE: NEVER EVER ADD THE ADMIN PANEL OR ADMIN DASHBOARD LINK TO THE HEADER NAVIGATION BAR.
+
+B. FOOTER DESIGN (DARK NAVY BACKDROP #0B1736):
+   - Email Subscription Card: Dark navy rounded glass card with "Be the first to know when new crowdsourcing projects are posted", email input, and subscribe button with envelope icon.
+   - 3 Column Menu:
+     1. ABOUT CROWDINNOV: About Us, Press Kit, Partner With Us, Partners, Privacy, Terms, Cookie Policy
+     2. COMMUNITY: Blog, Events & Webinars
+     3. SUPPORT: Contact Us, How CrowdInnov Works, Knowledge Base, FAQ, Innovation Resources
+   - Social Icons: Instagram, Facebook, X, LinkedIn, YouTube rounded buttons.
+   - Copyright: © Copyright CrowdInnov 2026.
+
+================================================================================
+2. FRONTEND ARCHITECTURE & ALL 24 PAGES
+================================================================================
+- Stack: React 18 + Vite 6 SPA (JavaScript), Lucide Icons, Axios API Client, Tailwind CSS.
+- 24 Sub-Routes: HomePage, ExploreChallengesPage, ForBusinessPage, ForStartupsPage, WhoWeArePage, ResultsPage, AboutUsPage, PressKitPage, PartnerWithUsPage, PartnersPage, PrivacyPage, TermsPage, CookiePolicyPage, BlogPage, EventsWebinarsPage, ContactUsPage, HowCrowdInnovWorksPage, KnowledgeBasePage, FaqPage, InnovationResourcesPage, ChallengeDetailPage, AdminDashboardPage, PostChallengePage, SolverDashboardPage.
+
+================================================================================
+3. DJANGO BACKEND & MONGODB SYNC (PRODUCTION READY)
+================================================================================
+- Stack: Python 3.12, Django 5.0, Django REST Framework, PyMongo, SQLite3, WhiteNoise, Gunicorn.
+- Endpoints:
+  * GET / POST /api/v1/challenges/ - List & create open innovation challenges
+  * GET /api/v1/challenges/<id>/ - Challenge detail specifications & prize pool
+  * POST /api/v1/challenges/<id>/submit/ - Solver entry submission with abstract & attachments
+  * POST /api/v1/subscriptions/subscribe/ - Real-time paid user subscription activation
+  * POST /api/v1/stripe/create-payment-intent/ - Stripe Checkout intent generator
+  * POST /api/v1/newsletter/ - Newsletter subscriber enrollment
+  * POST /api/v1/inquiries/ - Contact inquiry support ticket submission
+  * GET /api/v1/admin/analytics/ - Passcode-protected platform metrics (X-Admin-Passcode: aliabbas1234578!)
+- Dual Persistence Architecture:
+  * Primary: Django ORM Relational SQLite3 database cluster
+  * NoSQL Cloud: Real-time asynchronous fail-soft driver (api/db_mongo.py) syncing challenges, submissions, inquiries, and subscriptions to MongoDB Atlas Cloud.
+- Production Security & Hosting: CORS headers enabled, WhiteNoise static file compression, WSGI application entrypoint (`Procfile`).
+
+================================================================================
+4. MOBILE, ANDROID & IOS RESPONSIVENESS (FULLY AUDITED & READY)
+================================================================================
+- Touch & Gesture Optimization: -webkit-overflow-scrolling: touch enabled with -webkit-tap-highlight-color: transparent for smooth mobile Safari & Chrome gestures.
+- Viewport Containment: Strict overflow-x containment and max-width 100vw protection to eliminate horizontal scroll glitches across all smartphone resolutions.
+- Mobile Navigation: Touch-friendly slide-down menu drawer in Header.jsx for iPhone / Android touchscreens.
+- Safe Area Padding: iPhone notched display safe area inset padding (env(safe-area-inset-bottom)) integrated into global layout.
