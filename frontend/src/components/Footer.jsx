@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Sparkles, Instagram, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { Mail, Sparkles } from 'lucide-react';
 import { useToast } from './ToastContext';
 
 export const Footer = ({ onNavigate }) => {
@@ -169,49 +169,7 @@ export const Footer = ({ onNavigate }) => {
 
         {/* Bottom Social Bar & Copyright */}
         <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-          {/* Social Icons Bar */}
-          <div className="flex items-center gap-2">
-            <a
-              href="#instagram"
-              onClick={(e) => e.preventDefault()}
-              className="w-9 h-9 rounded-lg bg-[#112347] hover:bg-[#1b3464] border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white transition"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-4 h-4" />
-            </a>
-            <a
-              href="#facebook"
-              onClick={(e) => e.preventDefault()}
-              className="w-9 h-9 rounded-lg bg-[#112347] hover:bg-[#1b3464] border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white transition"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-4 h-4" />
-            </a>
-            <a
-              href="#twitter"
-              onClick={(e) => e.preventDefault()}
-              className="w-9 h-9 rounded-lg bg-[#112347] hover:bg-[#1b3464] border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white transition"
-              aria-label="X"
-            >
-              <Twitter className="w-4 h-4" />
-            </a>
-            <a
-              href="#linkedin"
-              onClick={(e) => e.preventDefault()}
-              className="w-9 h-9 rounded-lg bg-[#112347] hover:bg-[#1b3464] border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white transition"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a
-              href="#youtube"
-              onClick={(e) => e.preventDefault()}
-              className="w-9 h-9 rounded-lg bg-[#112347] hover:bg-[#1b3464] border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white transition"
-              aria-label="YouTube"
-            >
-              <Youtube className="w-4 h-4" />
-            </a>
-          </div>
+          {/* TODO: add verified social links */}
 
           {/* Copyright notice matching screenshot */}
           <div className="text-xs text-slate-400 font-medium">
